@@ -61,7 +61,7 @@ While serverless computing is commonly associated with **Functions-as-a-Service 
    - Built-in support for HTTP triggers, allowing each function to serve as an HTTP endpoint.
    - Secure endpoints with authentication, authorization, and HTTPS.
 
-![Azure diagram](azure-flasky-function-app.png))
+![Azure diagram](azure-flasky-function-app.png)
 
 ### **Google Cloud Platform (GCP)**
 1. **Cloud Functions**:
