@@ -4,21 +4,32 @@ This video series complements the [Scaling in the Cloud](https://github.com/mamo
 
 In this series, we will deploy Python-based serverless functions in **AWS**, **Azure**, and **GCP**. These are referred to as *Flask-like* or *flasky* throughout the project documentation. The goal is to deploy an identical API from the Cloud Scaling server using the serverless features of each cloud provider.
 
-By the end of this series, you will learn how to deploy simple Python-based HTTP endpoints as serverless functions across all three major cloud platforms using terraform.
+By the end of this series, you will learn how to deploy simple Python-based HTTP endpoints as serverless functions across all three major cloud platforms using Terraform.
 
-1. **Deploy Flask-based microservices** on virtual machines in AWS, Azure, and GCP.
+We will walk through the following tasks:
+
+1. **Deploy Python Code** for microservices using serverless technologies:
+   - **Lambdas** for AWS
+   - **Azure Functions** for Azure
+   - **Cloud Functions** for GCP
+
 2. **Use a document database** for microservice data storage:
    - **DynamoDB** for AWS
    - **CosmosDB** for Azure
    - **Firestore** for GCP
-3. **Create machine images** of the deployed virtual machines using **Packer**.
-4. **Implement cloud-native scaling solutions** with **Terraform**, tailored to each provider:
-   - **Auto Scaling** for AWS
-   - **Virtual Machine Scale Sets (VMSS)** for Azure
-   - **Managed Instance Groups (MIGs)** for GCP
-5. **Test scalability** by simulating load and triggering scaling events.
-6. **Clean up resources** by destroying all infrastructure created during the process.
-  
+
+3. **Configure HTTP endpoints** to invoke the serverless code:
+   - **API Gateway** for AWS
+   - **Function App** for Azure
+   - **Cloud Run** for GCP
+
+4. **Secure the HTTP endpoints**:
+   - **IAM Integration** for AWS
+   - **Function Keys** for Azure
+   - **Simple OIDC** for GCP
+
+5. **Clean up resources** by destroying all infrastructure created during the process.
+   
 ## Introduction to Scaling
 
 AWS Auto Scaling, Azure Virtual Machine Scale Sets (VMSS), and Google Cloud Managed Instance Groups (MIGs) are cloud-native solutions designed to ensure scalability, fault tolerance, and efficiency for virtual machine workloads. They share the core purpose of automatically adjusting the number of virtual machines to meet demand.
