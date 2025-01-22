@@ -83,7 +83,7 @@ While serverless computing is commonly associated with **Functions-as-a-Service 
 When deploying serverless HTTP endpoints, securing them is essential to protect sensitive data, prevent unauthorized access, and ensure only trusted clients or systems interact with your APIs. Cloud providers like AWS, Azure, and GCP offer native security methods for simple (lightweight) use cases:
 
 ### **AWS (Lambda with API Gateway)**
-1. **IAM Authentication:**
+- **IAM Authentication:**
    - API Gateway supports IAM roles and policies for access control.
    - Clients authenticate requests using AWS SigV4 signing.
    - Ideal for internal applications or when clients use AWS SDKs.
@@ -91,22 +91,19 @@ When deploying serverless HTTP endpoints, securing them is essential to protect 
 ---
 
 ### **Azure (Functions with HTTP Triggers)**
-1. **Function Keys:**
+- **Function Keys:**
    - Access is managed using function keys (auto-generated or custom).
    - Keys are passed in the query string (`?code=...`) or headers for authentication.
    - Suitable for lightweight security but not intended for advanced access control.
-2. **Azure AD Integration (Optional):**
-   - Combine function keys with Azure Active Directory for more robust authentication.
 
 ---
 
 ### **GCP (Cloud Functions)**
-1. **Google Auth Token:**
+- **Google Auth Token:**
    - Supports IAM-based authentication requiring a GCP OAuth 2.0 access token.
    - Tokens can be retrieved via `gcloud auth` or by using a service account.
    - Ensures access is limited to authorized users or services within GCP.
-2. **Public Endpoint Restrictions (Optional):**
-   - Configure public endpoints to restrict access to authenticated users.
+
 
 By leveraging these provider-specific methods, you can implement security measures that align with your application's requirements and ensure a secure serverless environment.
 
