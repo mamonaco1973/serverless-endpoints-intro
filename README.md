@@ -1,6 +1,6 @@
-# Scaling in the Cloud: AWS Auto Scaling, Azure VMSS, and GCP MIGs
+# Serverless HTTP Endpoint - AWS Lambdas, Azure Functions and GCP Cloud Functions
 
-In this video series, we will explore deploying Flask-based microservices and implementing cloud-native scaling solutions across AWS, Azure, and Google Cloud Platform (GCP):
+This video series is a follow up to ....
 
 1. **Deploy Flask-based microservices** on virtual machines in AWS, Azure, and GCP.
 2. **Use a document database** for microservice data storage:
