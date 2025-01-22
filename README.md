@@ -36,7 +36,6 @@ Serverless computing is a cloud-computing execution model where the cloud provid
 
 - **No Server Management**: Developers don't need to manage or provision servers; the cloud provider handles it all, allowing more focus on application logic.
 - **Automatic Scaling**: Serverless applications, including HTTP endpoints, automatically scale up or down based on demand, ensuring consistent performance regardless of traffic volume.
-- **Event-Driven**: Serverless platforms often trigger functions in response to events such as HTTP requests, making them ideal for API-driven workflows and real-time web applications.
 - **Pay-As-You-Go**: Costs are based on actual usage (e.g., number of requests or function execution time), providing cost-efficiency for workloads with varying traffic patterns.
 
 While serverless computing is commonly associated with **Functions-as-a-Service (FaaS)** platforms like AWS Lambda, Azure Functions, or Google Cloud Functions, it also integrates seamlessly with other services, such as API gateways for routing HTTP requests, managed databases for storage, and message queues for asynchronous processing. This makes serverless a versatile choice for building scalable and cost-effective HTTP-based solutions.
