@@ -42,11 +42,11 @@ Google Cloud **Managed Instance Groups** provide a streamlined, globally scalabl
 
 [Detailed Feature Comparison](./Comparison.md)
 
-## Flask Endpoint Summary
+## *Flasky* Endpoint Summary
 
-- [AWS Source Code](https://github.com/mamonaco1973/aws-flask-asg/blob/main/02-packer/scripts/app.py)
-- [Azure Source Code](https://github.com/mamonaco1973/azure-flask-vmss/blob/main/02-packer/scripts/app.py)
-- [GCP Source Code](https://github.com/mamonaco1973/gcp-flask-mig/blob/main/01-packer/scripts/app.py)
+- [AWS Source Code](https://github.com/mamonaco1973/aws-flasky-lambdas/tree/main/01-lambdas/code)
+- [Azure Source Code](https://github.com/mamonaco1973/azure-flasky-function-app/blob/main/02-flasky/function_app.py)
+- [GCP Source Code](https://github.com/mamonaco1973/gcp-flasky-cloud-functions/blob/main/01-cloudfunctions/code/main.py)
 
 ### `/gtg` (GET)
 - **Purpose**: Health check.
