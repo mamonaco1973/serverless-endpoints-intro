@@ -30,17 +30,85 @@ We will walk through the following tasks:
 
 5. **Clean up resources** by destroying all infrastructure created during the process.
    
-## Introduction to Scaling
+## Introduction to Serverless Computing for HTTP Endpoints
 
-AWS Auto Scaling, Azure Virtual Machine Scale Sets (VMSS), and Google Cloud Managed Instance Groups (MIGs) are cloud-native solutions designed to ensure scalability, fault tolerance, and efficiency for virtual machine workloads. They share the core purpose of automatically adjusting the number of virtual machines to meet demand.
+Serverless computing is a cloud-computing execution model where the cloud provider dynamically manages the infrastructure, including server provisioning, scaling, and maintenance. This approach allows developers to focus entirely on writing and deploying code, without the need to manage or maintain underlying servers. A key use case for serverless computing is building and managing **HTTP endpoints**, making it a powerful solution for web applications, APIs, and microservices. Key characteristics of serverless computing include:
 
-**AWS Auto Scaling** excels in its deep integration with the AWS ecosystem, providing granular control over scaling policies and seamless compatibility with services like CloudWatch and Elastic Load Balancer. It supports dynamic scaling based on metrics, scheduled scaling, and predictive scaling, making it ideal for highly variable workloads, batch processing, and multi-region failover solutions. Auto-healing capabilities ensure instances are replaced automatically when issues arise, and configurations are defined using Launch Templates or Launch Configurations.
+- **No Server Management**: Developers don't need to manage or provision servers; the cloud provider handles it all, allowing more focus on application logic.
+- **Automatic Scaling**: Serverless applications, including HTTP endpoints, automatically scale up or down based on demand, ensuring consistent performance regardless of traffic volume.
+- **Event-Driven**: Serverless platforms often trigger functions in response to events such as HTTP requests, making them ideal for API-driven workflows and real-time web applications.
+- **Pay-As-You-Go**: Costs are based on actual usage (e.g., number of requests or function execution time), providing cost-efficiency for workloads with varying traffic patterns.
 
-**Azure VM Scale Sets** are designed for enterprise-grade applications, particularly in environments already leveraging Azure's extensive suite of tools. They simplify the scaling and management of VMs, offering easy integration with Azure Load Balancer, Application Gateway, and Traffic Manager. Azure VMSS also supports advanced features like rolling upgrades and fault domain management, ensuring high availability. 
+While serverless computing is commonly associated with **Functions-as-a-Service (FaaS)** platforms like AWS Lambda, Azure Functions, or Google Cloud Functions, it also integrates seamlessly with other services, such as API gateways for routing HTTP requests, managed databases for storage, and message queues for asynchronous processing. This makes serverless a versatile choice for building scalable and cost-effective HTTP-based solutions.
 
-Google Cloud **Managed Instance Groups** provide a streamlined, globally scalable solution that integrates seamlessly with GCP’s innovative services like Cloud Monitoring and HTTP(S) Load Balancers. MIGs are particularly well-suited for distributed applications and microservices architectures, offering straightforward configuration and strong support for regional and global deployments. With features like automatic health checking, rolling updates, and support for preemptible VMs, GCP MIGs cater to modern, cost-sensitive cloud-native applications.
+### **AWS**
+1. **AWS Lambda**:
+   - Runs code in response to HTTP requests.
+   - Integrates directly with API Gateway for seamless endpoint creation.
 
-[Detailed Feature Comparison](./Comparison.md)
+2. **Amazon API Gateway**:
+   - Fully managed service for creating and managing HTTP endpoints.
+   - Routes incoming HTTP requests to AWS Lambda functions.
+   - Supports REST APIs, HTTP APIs, and WebSocket APIs.
+
+![AWS diagram](aws-flasky-lambdas.png)
+
+### **Azure**
+1. **Azure Functions (Function Apps)**:
+   - Azure's primary FaaS platform for executing code in response to HTTP requests.
+   - Deployed as part of **Function Apps**, which group multiple functions together.
+   - Supports automatic scaling and event-driven execution.
+   - Built-in support for HTTP triggers, allowing each function to serve as an HTTP endpoint.
+   - Secure endpoints with authentication, authorization, and HTTPS.
+
+![Azure diagram](azure-flasky-function-app.png))
+
+### **Google Cloud Platform (GCP)**
+1. **Cloud Functions**:
+   - Serverless FaaS platform with built-in HTTP trigger support.
+   - Each function can serve as an HTTP endpoint.
+
+2. **Cloud Run**:
+   - Runs containerized applications and clound functions as HTTP endpoints.
+   - Automatically scales based on demand and integrates with custom domain mapping.
+
+3. **API Gateway**:
+   - Provides a managed gateway to expose HTTP endpoints built with Cloud Functions or Cloud Run.
+   - Adds features like authentication, rate limiting, and logging.
+
+![GCP diagram](gcp-flasky-cloud-functions.png)
+
+## Securing Serverless APIs: Lightweight Methods
+
+When deploying serverless HTTP endpoints, securing them is essential to protect sensitive data, prevent unauthorized access, and ensure only trusted clients or systems interact with your APIs. Cloud providers like AWS, Azure, and GCP offer native security methods for simple (lightweight) use cases:
+
+### **AWS (Lambda with API Gateway)**
+1. **IAM Authentication:**
+   - API Gateway supports IAM roles and policies for access control.
+   - Clients authenticate requests using AWS SigV4 signing.
+   - Ideal for internal applications or when clients use AWS SDKs.
+
+---
+
+### **Azure (Functions with HTTP Triggers)**
+1. **Function Keys:**
+   - Access is managed using function keys (auto-generated or custom).
+   - Keys are passed in the query string (`?code=...`) or headers for authentication.
+   - Suitable for lightweight security but not intended for advanced access control.
+2. **Azure AD Integration (Optional):**
+   - Combine function keys with Azure Active Directory for more robust authentication.
+
+---
+
+### **GCP (Cloud Functions)**
+1. **Google Auth Token:**
+   - Supports IAM-based authentication requiring a GCP OAuth 2.0 access token.
+   - Tokens can be retrieved via `gcloud auth` or by using a service account.
+   - Ensures access is limited to authorized users or services within GCP.
+2. **Public Endpoint Restrictions (Optional):**
+   - Configure public endpoints to restrict access to authenticated users.
+
+By leveraging these provider-specific methods, you can implement security measures that align with your application's requirements and ensure a secure serverless environment.
 
 ## *Flasky* Endpoint Summary
 
@@ -71,15 +139,3 @@ Google Cloud **Managed Instance Groups** provide a streamlined, globally scalabl
 - **Response**: 
   - List of candidates (JSON) with status `200`.
   - `"Not Found"` with status `404` if no candidates exist.
-
-## AWS Solution
-
-![AWS diagram](aws-flask-asg.png)
-
-## Azure Solution
-
-![AWS diagram](azure-flask-vmss.png)
-
-## GCP Solution
-
-![AWS diagram](gcp-flask-mig.png)
