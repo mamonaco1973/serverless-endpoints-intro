@@ -29,7 +29,20 @@ We will walk through the following tasks:
    - **Simple OIDC** for GCP
 
 5. **Clean up resources** by destroying all infrastructure created during the process.
-   
+
+## Quick Links
+
+1. [Introduction Video](TBD)
+2. AWS Solution
+   - [AWS Solution](TBD)
+   - [GitHub Project](https://github.com/mamonaco1973/aws-flasky-lambdas)
+3. Azure Solution
+   - [Azure Solution](TBD)
+   - [GitHub Project](https://github.com/mamonaco1973/azure-flasky-function-app)
+4. GCP Solution
+   - [GCP Solution](TBD)
+   - [GitHub Project](https://github.com/mamonaco1973/gcp-flasky-cloud-functions)
+
 ## Introduction to Serverless Computing for HTTP Endpoints
 
 Serverless computing is a cloud-computing execution model where the cloud provider dynamically manages the infrastructure, including server provisioning, scaling, and maintenance. This approach allows developers to focus entirely on writing and deploying code, without the need to manage or maintain underlying servers. A key use case for serverless computing is building and managing **HTTP endpoints**, making it a powerful solution for web applications, APIs, and microservices. Key characteristics of serverless computing include:
