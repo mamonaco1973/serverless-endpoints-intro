@@ -26,7 +26,7 @@ We will walk through the following tasks:
 4. **Secure the HTTP endpoints**:
    - **IAM Integration** for AWS
    - **Function Keys** for Azure
-   - **Simple OIDC** for GCP
+   - **JWT Token* for GCP
 
 5. **Clean up resources** by destroying all infrastructure created during the process.
 
