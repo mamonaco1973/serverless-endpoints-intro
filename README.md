@@ -32,7 +32,7 @@ We will walk through the following tasks:
 
 ## Quick Links
 
-1. [Introduction Video](TBD)
+1. [Introduction Video](https://youtu.be/NPhu0byKj_A)
 2. AWS Solution
    - [AWS Solution](TBD)
    - [GitHub Project](https://github.com/mamonaco1973/aws-flasky-lambdas)
