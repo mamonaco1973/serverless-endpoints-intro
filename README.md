@@ -80,13 +80,9 @@ While serverless computing is commonly associated with **Functions-as-a-Service 
    - Serverless FaaS platform with built-in HTTP trigger support.
    - Each function can serve as an HTTP endpoint.
 
-2. **Cloud Run**:
-   - Runs containerized applications and clound functions as HTTP endpoints.
-   - Automatically scales based on demand and integrates with custom domain mapping.
-
-3. **API Gateway**:
-   - Provides a managed gateway to expose HTTP endpoints built with Cloud Functions or Cloud Run.
-   - Adds features like authentication, rate limiting, and logging.
+2. **API Gateway**:
+   - Not used in this project because Cloud Functions gives us everything we need for our simple HTTP endpoints
+   - Adds features like better routing, authentication, rate limiting, and logging.
 
 ![GCP diagram](gcp-flasky-cloud-functions.png)
 
@@ -120,7 +116,7 @@ When deploying serverless HTTP endpoints, securing them is essential to protect 
 
 ### **GCP (Cloud Functions)**
 - **Google Auth Token:**
-   - Supports IAM-based authentication requiring a GCP OAuth 2.0 access token.
+   - Protect endpoints using a signed JWT (JSON Web Token).
    - Tokens can be retrieved via `gcloud auth` or by using a service account.
    - Ensures access is limited to authorized users or services within GCP.
 
