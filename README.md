@@ -1,4 +1,4 @@
-# Serverless HTTP Endpoint - AWS Lambdas, Azure Functions and GCP Cloud Functions
+# Serverless HTTP Endpoints - AWS Lambdas, Azure Functions and GCP Cloud Functions
 
 This video series complements the [Scaling in the Cloud](https://github.com/mamonaco1973/cloud-scaling-intro/blob/main/README.md) series. In that series, we deployed a simple microservice using Python and the Flask framework.
 
