@@ -90,6 +90,14 @@ While serverless computing is commonly associated with **Functions-as-a-Service 
 
 ![GCP diagram](gcp-flasky-cloud-functions.png)
 
+### Supported Serverless Languages
+
+| Cloud Provider | Out-of-the-Box Languages                                     | Custom Runtimes                     |
+|----------------|-------------------------------------------------------------|-------------------------------------|
+| AWS Lambda     | Node.js, Python, Java, .NET (C#), Ruby, Go, PowerShell      | Any language via Runtime API        |
+| Azure Functions| .NET (C#, F#), Python, Java, JavaScript, TypeScript, PowerShell | Any language via custom handlers    |
+| GCP Functions  | Node.js, Python, Go, Java, .NET, Ruby, PHP                  | Any language via Cloud Run          |
+
 ## Securing Serverless APIs: Lightweight Methods
 
 When deploying serverless HTTP endpoints, securing them is essential to protect sensitive data, prevent unauthorized access, and ensure only trusted clients or systems interact with your APIs. Cloud providers like AWS, Azure, and GCP offer native security methods for simple (lightweight) use cases:
