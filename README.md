@@ -34,7 +34,7 @@ We will walk through the following tasks:
 
 1. [Introduction Video](https://youtu.be/NPhu0byKj_A)
 2. AWS Solution
-   - [AWS Solution](TBD)
+   - [AWS Lambda HTTP Endpoints](https://youtu.be/Psf56Fvn62E)
    - [GitHub Project](https://github.com/mamonaco1973/aws-flasky-lambdas)
 3. Azure Solution
    - [Azure Solution](TBD)
