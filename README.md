@@ -37,7 +37,7 @@ We will walk through the following tasks:
    - [AWS Lambda HTTP Endpoints](https://youtu.be/Psf56Fvn62E)
    - [GitHub Project](https://github.com/mamonaco1973/aws-flasky-lambdas)
 3. Azure Solution
-   - [Azure Solution](TBD)
+   - [Azure HTTP Function App](https://youtu.be/aIi8dtXs4qk)
    - [GitHub Project](https://github.com/mamonaco1973/azure-flasky-function-app)
 4. GCP Solution
    - [GCP Solution](TBD)
