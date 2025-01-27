@@ -40,7 +40,7 @@ We will walk through the following tasks:
    - [Azure HTTP Function App](https://youtu.be/aIi8dtXs4qk)
    - [GitHub Project](https://github.com/mamonaco1973/azure-flasky-function-app)
 4. GCP Solution
-   - [GCP Solution](TBD)
+   - [GCP HTTP Cloud Functions](https://youtu.be/vVeci5df3Wc)
    - [GitHub Project](https://github.com/mamonaco1973/gcp-flasky-cloud-functions)
 
 ## Introduction to Serverless Computing for HTTP Endpoints
